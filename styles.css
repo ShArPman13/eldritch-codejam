@@ -1,0 +1,107 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-width: 480px;
+  min-height: 100vh;
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  font-size: 16px;
+  color: #fff;
+  text-align: center;
+  background: url("../assets/home.png") center/cover, rgba(0, 0, 0, 0);
+  background-blend-mode: multiply;
+  transition: background-image 1s ease-in-out;
+  padding: 50px;
+  position: flex;
+  justify-content: space-between;
+}
+
+.container-for-ancients {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.ancient-card {
+  width: 200px;
+  height: 260px;
+  background-size: contain;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.ancient-card:active {
+  transform: scale(1.1);
+  transition: 0.5s all;
+}
+
+.ancient-card:hover {
+  opacity: 1;
+  transition: 0.25s all;
+}
+
+
+.azathoth {
+  background-image: url("../assets/ancients/azathoth.png");
+}
+
+.cthulthu {
+  background-image: url("../assets/ancients/cthulthu.png");
+}
+
+.logsothoth {
+  background-image: url("../assets/ancients/iogsothoth.png");
+}
+
+.shubniggurath {
+  background-image: url("../assets/ancients/shubniggurath.png");
+}
+
+.difficulty-conteiner {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.difficulty {
+  width: 120px;
+  height: 40px;
+  border: solid rgb(179, 7, 7) 2px;
+  background-color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 13px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.difficulty:hover {
+  opacity: 1;
+  transition: 0.25s all;
+}
+
+.shuffle-btn {
+  width: 200px;
+  height: 80px;
+  background-color: rgb(255, 0, 0);
+  font-family: Verdana, Tahoma, sans-serif;
+  font-size: 18px;
+  font-weight: 1000;
+  opacity: 0.5;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+.shuffle-btn:hover {
+  opacity: 1;
+}
