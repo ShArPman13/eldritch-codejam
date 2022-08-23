@@ -60,19 +60,19 @@ body {
 
 
 .azathoth {
-  background-image: url("./assets/ancients/Azathoth.png");
+  background-image: url("./assets/Ancients/Azathoth.png");
 }
 
 .cthulthu {
-  background-image: url("./assets/ancients/Cthulthu.png");
+  background-image: url("./assets/Ancients/Cthulthu.png");
 }
 
 .logsothoth {
-  background-image: url("./assets/ancients/IogSothoth.png");
+  background-image: url("./assets/Ancients/IogSothoth.png");
 }
 
 .shubniggurath {
-  background-image: url("./assets/ancients/ShubNiggurath.png");
+  background-image: url("./assets/Ancients/ShubNiggurath.png");
 }
 
 .difficulty-container {
