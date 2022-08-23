@@ -13,7 +13,7 @@ body {
   font-size: 16px;
   color: #fff;
   text-align: center;
-  background: url("../assets/home.png") center/cover, rgba(0, 0, 0, 0);
+  background: url("./assets/home.png") center/cover, rgba(0, 0, 0, 0);
   background-blend-mode: multiply;
   transition: background-image 1s ease-in-out;
   padding: 50px;
@@ -60,19 +60,19 @@ body {
 
 
 .azathoth {
-  background-image: url("../assets/ancients/azathoth.png");
+  background-image: url("./assets/ancients/azathoth.png");
 }
 
 .cthulthu {
-  background-image: url("../assets/ancients/cthulthu.png");
+  background-image: url("./assets/ancients/cthulthu.png");
 }
 
 .logsothoth {
-  background-image: url("../assets/ancients/iogsothoth.png");
+  background-image: url("./assets/ancients/iogsothoth.png");
 }
 
 .shubniggurath {
-  background-image: url("../assets/ancients/shubniggurath.png");
+  background-image: url("./assets/ancients/shubniggurath.png");
 }
 
 .difficulty-container {
