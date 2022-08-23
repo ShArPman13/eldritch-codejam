@@ -28,12 +28,24 @@ body {
   width: 100%;
 }
 
+.container-for-ancients-left,
+.container-for-ancients-right {
+  display: flex;
+  gap: 20px;
+}
+
 .ancient-card {
   width: 200px;
   height: 260px;
   background-size: contain;
   cursor: pointer;
   opacity: 0.5;
+  transition: 0.5s all;
+}
+
+.ancient-card.active {
+  opacity: 1;
+  transform: scale(1.1);
 }
 
 .ancient-card:active {
@@ -63,12 +75,18 @@ body {
   background-image: url("../assets/ancients/shubniggurath.png");
 }
 
-.difficulty-conteiner {
+.difficulty-container {
   display: flex;
   gap: 15px;
   justify-content: center;
   align-items: center;
   margin-top: 50px;
+  opacity: 0;
+}
+
+.difficulty-container.active {
+  opacity: 1;
+  transition: 1s, all;
 }
 
 .difficulty {
@@ -85,12 +103,23 @@ body {
   cursor: pointer;
 }
 
+.difficulty.active {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 .difficulty:hover {
   opacity: 1;
   transition: 0.25s all;
 }
 
+.deck-container {
+  display: flex;
+  justify-content: center;
+}
+
 .shuffle-btn {
+  display: none;
   width: 200px;
   height: 80px;
   background-color: rgb(255, 0, 0);
@@ -100,6 +129,12 @@ body {
   opacity: 0.5;
   cursor: pointer;
   margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+}
+
+.shuffle-btn.active {
+  display: flex;
 }
 
 .shuffle-btn:hover {
