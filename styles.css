@@ -41,6 +41,7 @@ body {
   cursor: pointer;
   opacity: 0.5;
   transition: 0.5s all;
+  border-radius: 10px;
 }
 
 .ancient-card.active {
@@ -102,12 +103,13 @@ body {
   font-size: 13px;
   opacity: 0.5;
   cursor: pointer;
+  border-radius: 10px;
 }
 
 .difficulty.active {
   opacity: 1;
   transform: scale(1.1);
-  background-color: rgb(0, 0, 0);
+  background-color: rgb(62, 62, 62);
 }
 
 .difficulty:hover {
@@ -127,7 +129,7 @@ body {
   display: none;
   width: 200px;
   height: 80px;
-  background-color: rgb(255, 0, 0);
+  background-color: rgb(255 221 0);
   font-family: Verdana, Tahoma, sans-serif;
   font-size: 18px;
   font-weight: 1000;
@@ -136,6 +138,7 @@ body {
   margin-top: 50px;
   justify-content: center;
   align-items: center;
+  border-radius: 10px;
 }
 
 .shuffle-btn.active {
@@ -200,8 +203,9 @@ body {
   align-self: flex-start;
   cursor: pointer;
   opacity: 0.8;
-  transition: 0.5s all;
+  /* transition: 0.5s all; */
   box-shadow: 3px 3px 10px 0 rgba(255, 255, 255, 0.533);
+  border-radius: 10px;
 }
 
 .back-card.active:hover {
@@ -210,10 +214,10 @@ body {
 }
 
 .container-back-last-card {
-  width: 100%;
+  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
-  margin-top: 100px;
+  /* margin-top: 100px; */
   gap: 30px;
 }
 
@@ -221,6 +225,7 @@ body {
   width: 200px;
   height: 290px;
   background-size: contain;
+  border-radius: 10px;
   /* transition: 0.5s all; */
 }
 
@@ -246,7 +251,26 @@ body {
 }
 
 .current-state {
+  margin-left: 100px;
   position: absolute;
-  right: 200px;
-  bottom: 180px;
+  right: 407px;
+  bottom: 17%;
+}
+
+footer {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 335px;
+  margin-top: 120px;
+  gap: 30px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards-out {
+  display: none;
 }
