@@ -1,5 +1,4 @@
 import ancientsData from "../data/ancients.js"
-// import difficulties from "./data/difficulties.js"
 import blueCardsData from "../data/mythicCards/blue/index.js"
 import brownCardsData from "../data/mythicCards/brown/index.js"
 import greenCardsData from "../data/mythicCards/green/index.js"
@@ -13,6 +12,7 @@ const containerForAncientCardsAndLabel = document.querySelector('.container-for-
 const backCard = document.querySelector('.back-card');
 const lastCard = document.querySelector('.last-card');
 const stageContainer = document.querySelector('.current-state')
+const cardsOut = document.querySelector('.cards-out');
 
 const divGreenCircle = document.createElement('div');
 const divBlueCircle = document.createElement('div');
@@ -51,6 +51,8 @@ ancientCard.forEach((el, i) => el.addEventListener('click', () => {
 
   difficultyContainer.classList.add('active')
   shuffleBtn.classList.remove('active');
+  cardsOut.classList.remove('active');
+  backCard.classList.remove('end');
 
   showStartCardsForAncient(i);
   ancientNum = i;
@@ -63,6 +65,8 @@ difficulty.forEach(el => el.addEventListener('click', (e) => {
   })
   backCard.classList.remove('active');
   lastCard.classList.remove('active');
+  cardsOut.classList.remove('active');
+  backCard.classList.remove('end');
 
   stageContainer.innerHTML = '';
   el.classList.add('active');
@@ -333,17 +337,25 @@ function shuffle(arr) {//Shuffle array - Тасование Фишера — Й�
   })
 }
 function fillStatus() {//следим и обновляем статус
+  const textStages = document.querySelectorAll('.text-stage');
   divGreenCircle.textContent = countCardForStage(statusArrFirstStage)[0];
   divBlueCircle.textContent = countCardForStage(statusArrFirstStage)[1];
   divBrownCircle.textContent = countCardForStage(statusArrFirstStage)[2];
-
+  if (countCardForStage(statusArrFirstStage)[0] === 0 && countCardForStage(statusArrFirstStage)[1] === 0 && countCardForStage(statusArrFirstStage)[2] === 0) {
+    textStages[0].classList.add('finish');
+  }
   divGreenCircle2.textContent = countCardForStage(statusArrSecondStage)[0];
   divBlueCircle2.textContent = countCardForStage(statusArrSecondStage)[1];
   divBrownCircle2.textContent = countCardForStage(statusArrSecondStage)[2];
-
+  if (countCardForStage(statusArrSecondStage)[0] === 0 && countCardForStage(statusArrSecondStage)[1] === 0 && countCardForStage(statusArrSecondStage)[2] === 0) {
+    textStages[1].classList.add('finish');
+  }
   divGreenCircle3.textContent = countCardForStage(statusArrThirdStage)[0];
   divBlueCircle3.textContent = countCardForStage(statusArrThirdStage)[1];
   divBrownCircle3.textContent = countCardForStage(statusArrThirdStage)[2];
+  if (countCardForStage(statusArrThirdStage)[0] === 0 && countCardForStage(statusArrThirdStage)[1] === 0 && countCardForStage(statusArrThirdStage)[2] === 0) {
+    textStages[2].classList.add('finish');
+  }
 }
 function countCardForStage(statusArray) {
   let green = 0;
@@ -422,12 +434,10 @@ backCard.addEventListener('click', (i) => {
   lastCard.classList.add('active');
   currentCard = deckForGame.shift()
 
-  if (currentCard === undefined) {
-    containerForAncientCardsAndLabel.innerHTML = '';
-    // alert('Карты в колоде закончились');
+  if (deckForGame.length === 0) {
+    backCard.classList.add('end');
     backCard.classList.remove('active');
   }
-
   if (statusArrFirstStage.length > 0) {
     statusArrFirstStage = statusArrFirstStage.filter(card => card !== currentCard)
     fillStatus();
@@ -438,6 +448,12 @@ backCard.addEventListener('click', (i) => {
     statusArrThirdStage = statusArrThirdStage.filter(card => card !== currentCard)
     fillStatus();
   }
+  let x = currentCard;
+  if (currentCard === undefined) {
+    currentCard === x
+  }
+  if (currentCard !== undefined) {
+    lastCard.style.backgroundImage = `url(${currentCard})`;
+  }
 
-  lastCard.style.backgroundImage = `url(${currentCard})`;
 })
