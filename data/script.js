@@ -423,7 +423,8 @@ backCard.addEventListener('click', (i) => {
   currentCard = deckForGame.shift()
 
   if (currentCard === undefined) {
-    alert('Карты в колоде закончились');
+    containerForAncientCardsAndLabel.innerHTML = '';
+    // alert('Карты в колоде закончились');
     backCard.classList.remove('active');
   }
 
