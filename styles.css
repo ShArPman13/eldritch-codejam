@@ -208,17 +208,22 @@ body {
   border-radius: 10px;
 }
 
+.back-card.end {
+  width: 200px;
+  height: 290px;
+  visibility: none;
+}
+
 .back-card.active:hover {
   opacity: 1;
   transition: 0.5s all;
 }
 
 .container-back-last-card {
-  /* width: 100%; */
   display: flex;
   justify-content: flex-start;
-  /* margin-top: 100px; */
   gap: 30px;
+  width: 500px;
 }
 
 .last-card.active {
@@ -250,17 +255,10 @@ body {
   margin-bottom: 10px;
 }
 
-.current-state {
-  margin-left: 100px;
-  position: absolute;
-  right: 407px;
-  bottom: 17%;
-}
-
 footer {
   display: flex;
-  justify-content: flex-start;
-  margin-left: 335px;
+  justify-content: center;
+  align-items: center;
   margin-top: 120px;
   gap: 30px;
 }
@@ -273,4 +271,17 @@ main {
 
 .cards-out {
   display: none;
+}
+
+.cards-out.active {
+  display: flex;
+  width: 100px;
+  height: 68px;
+  font-size: 31px;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.text-stage.finish {
+  opacity: 0.2;
 }
