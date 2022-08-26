@@ -1,8 +1,8 @@
-import ancientsData from "/data/ancients.js"
-import difficulties from "/data/difficulties.js"
-import blueCardsData from "/data/mythicCards/blue/index.js"
-import brownCardsData from "/data/mythicCards/brown/index.js"
-import greenCardsData from "/data/mythicCards/green/index.js"
+import ancientsData from "../data/ancients.js"
+// import difficulties from "./data/difficulties.js"
+import blueCardsData from "../data/mythicCards/blue/index.js"
+import brownCardsData from "../data/mythicCards/brown/index.js"
+import greenCardsData from "../data/mythicCards/green/index.js"
 
 const ancientCard = document.querySelectorAll('.ancient-card');
 const difficultyContainer = document.querySelector('.difficulty-container');
