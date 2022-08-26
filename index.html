@@ -17,6 +17,10 @@
         <button class="ancient-card azathoth"></button>
         <button class="ancient-card cthulthu"></button>
       </div>
+      <div class="container-for-ancients-cards">
+        <div class="ancients-cards"></div>
+      </div>
+
       <div class="container-for-ancients-right">
         <button class="ancient-card logsothoth"></button>
         <button class="ancient-card shubniggurath"></button>
@@ -26,11 +30,11 @@
 
   <main>
     <div class="difficulty-container">
-      <div class="difficulty">Очень низкая</div>
-      <div class="difficulty">Низкая</div>
-      <div class="difficulty">Нормальная</div>
-      <div class="difficulty">Сложная</div>
-      <div class="difficulty">Очень ложная</div>
+      <div class="difficulty very-easy">Очень легкий</div>
+      <div class="difficulty easy">Легкий</div>
+      <div class="difficulty medium">Средний</div>
+      <div class="difficulty hard">Высокий</div>
+      <div class="difficulty very-hard">Очень высокий</div>
     </div>
   </main>
 
@@ -38,8 +42,13 @@
     <div class="deck-container">
       <button class="shuffle-btn">Смешать колоду</button>
     </div>
+    <div class="container-back-last-card">
+      <div class="back-card"></div>
+      <div class="last-card"></div>
+      <div class="current-state"></div>
+    </div>
   </footer>
-  <script src="data/script.js"></script>
+  <script type="module" src="data/script.js"></script>
 </body>
 
 </html>
